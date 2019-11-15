@@ -11,7 +11,7 @@ import UranusTexture from '../Component/textures/uranus.jpg';
 import NeptuneTexture from '../Component/textures/neptune.jpg';
 import GalaxyStarfield from '../Component/textures/galaxy_stars.png';
 
-const SolarSystem = (props) => {
+const SolarSystem = () => {
 
 // Initiate scene
   let Scene = new THREE.Scene();
