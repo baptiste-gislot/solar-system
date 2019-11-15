@@ -17,7 +17,7 @@ const SolarSystem = (props) => {
   let Scene = new THREE.Scene();
   let Camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 1, 5000);
   Camera.position.z = 2000;
-  Camera.position.y = 1000;
+  Camera.position.y = 1400;
   Camera.lookAt(0, 0, 0);
   let Renderer = new THREE.WebGLRenderer({antialias: true});
   let manager = new THREE.LoadingManager();
@@ -206,20 +206,20 @@ const SolarSystem = (props) => {
 
     Mercury.position.x = rMercury * Math.cos(theta*1.6);
     Mercury.position.z = rMercury * Math.sin(theta*1.6);
-    Venus.position.x = rVenus * Math.cos(theta);
-    Venus.position.z = rVenus * Math.sin(theta);
+    Venus.position.x = rVenus * Math.cos(theta*1.18);
+    Venus.position.z = rVenus * Math.sin(theta*1.18);
     Earth.position.x = rEarth * Math.cos(theta);
     Earth.position.z = rEarth * Math.sin(theta);
-    Mars.position.x = rMars * Math.cos(theta);
-    Mars.position.z = rMars * Math.sin(theta);
-    Jupiter.position.x = rJupiter * Math.cos(theta);
-    Jupiter.position.z = rJupiter * Math.sin(theta);
-    Saturn.position.x = rSaturn * Math.cos(theta);
-    Saturn.position.z = rSaturn * Math.sin(theta);
-    Uranus.position.x = rUranus * Math.cos(theta);
-    Uranus.position.z = rUranus * Math.sin(theta);
-    Neptune.position.x = rNeptune * Math.cos(theta);
-    Neptune.position.z = rNeptune * Math.sin(theta);
+    Mars.position.x = rMars * Math.cos(theta*0.8);
+    Mars.position.z = rMars * Math.sin(theta*0.8);
+    Jupiter.position.x = rJupiter * Math.cos(theta*0.44);
+    Jupiter.position.z = rJupiter * Math.sin(theta*0.44);
+    Saturn.position.x = rSaturn * Math.cos(theta*0.33);
+    Saturn.position.z = rSaturn * Math.sin(theta*0.33);
+    Uranus.position.x = rUranus * Math.cos(theta*0.23);
+    Uranus.position.z = rUranus * Math.sin(theta*0.23);
+    Neptune.position.x = rNeptune * Math.cos(theta*0.18);
+    Neptune.position.z = rNeptune * Math.sin(theta*0.18);
 
     Renderer.render(Scene, Camera);
   }
