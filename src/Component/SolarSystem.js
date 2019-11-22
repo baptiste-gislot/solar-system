@@ -80,8 +80,8 @@ const SolarSystem = () => {
       let sunGeometry = new THREE.SphereGeometry(180, 32, 32);
       let sunMaterial = new THREE.MeshLambertMaterial({
         map: sunText,
-        emissive: 0xfdb813,
-        emissiveIntensity: 1
+        lightmap: sunText,
+        isMeshLambertMaterial: true
       });
 
       Sun = new THREE.Mesh(sunGeometry, sunMaterial);
@@ -202,7 +202,16 @@ const SolarSystem = () => {
   const sceneAnimate = () => {//Creation de l'animation
     requestAnimationFrame(sceneAnimate);
     theta += dTheta;
-    //Earth.rotation.y += 0.005;
+    Sun.rotation.y += 0.001;
+
+    Mercury.rotation.y += 0.005;
+    Earth.rotation.y += 0.005;
+    Venus.rotation.y += 0.005;
+    Mars.rotation.y += 0.005;
+    Jupiter.rotation.y += 0.005;
+    Saturn.rotation.y += 0.005;
+    Uranus.rotation.y += 0.005;
+    Neptune.rotation.y += 0.005;
 
     Mercury.position.x = rMercury * Math.cos(theta*1.6);
     Mercury.position.z = rMercury * Math.sin(theta*1.6);
