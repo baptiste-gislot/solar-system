@@ -57,7 +57,7 @@ const SolarSystem = () => {
     canvasElement.appendChild(Renderer.domElement);
 
     // Création de la lumière de la scène
-    Light = new THREE.PointLight( 0xffffff, 1);
+    Light = new THREE.PointLight( 0xffffff, 1.5);
     Light.position.set(0, 0, 0);
     Light.castShadow = true;
     Scene.add(Light);
@@ -80,7 +80,7 @@ const SolarSystem = () => {
       let sunGeometry = new THREE.SphereGeometry(180, 32, 32);
       let sunMaterial = new THREE.MeshLambertMaterial({
         map: sunText,
-        lightmap: sunText,
+        lightMap: sunText,
         isMeshLambertMaterial: true
       });
 
